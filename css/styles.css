@@ -36,7 +36,7 @@
 
 :root {
 	--color-black: #000000;
-	--color-white: #ffffff;
+	--color-white: #fff4ee;
 	--color-white-08: rgba(255, 255, 255, 0.8);
 	--color-dark: #232222;
 	--color-yellow: #f58908;
@@ -53,7 +53,7 @@
 	--font-family-el-camino-caps: 'El Camino Caps', sans-serif;
 	--font-family-el-camino-soft-edges-caps: 'El Camino Soft Edges Caps',
 		sans-serif;
-	--font-family-ranch-water: 'COWBOY', sans-serif;
+	--font-family-ranch-water: 'Ranch Water', sans-serif;
 
 	--transition-duration: 0.2s;
 
@@ -406,14 +406,18 @@ body.is-lock {
 	translate: -50% -50%;
 }
 
+.tickets__items .tickets__item:nth-child(1) .card-ticket__body {
+	margin-top: -28.5px;
+}
+
 .card-ticket__body {
 	z-index: 1;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	flex-grow: 1;
-	margin-top: -30px;
-	padding: 0 32px 32px;
+	margin-top: -41px;
+	padding: 0 16px 32px;
 }
 
 .card-ticket__info {
@@ -424,7 +428,7 @@ body.is-lock {
 }
 
 .card-ticket__title {
-	font-family: var(--font-family-el-camino-caps);
+	font-family: var(--font-family-el-camino-soft-edges-caps);
 	font-size: 36px;
 	line-height: 1.15;
 }
@@ -432,12 +436,16 @@ body.is-lock {
 .card-ticket__type {
 	font-family: var(--font-family-ranch-water);
 	font-size: 24px;
+	font-weight: 400;
 	line-height: 1;
 }
 
 .card-ticket__description {
+	max-width: 234px;
+	margin-inline: auto;
 	font-size: 15px;
 	line-height: 1.05;
+	text-wrap: balance;
 	color: var(--color-beige);
 }
 
@@ -493,23 +501,9 @@ body.is-lock {
 	padding-block: 76px 86px;
 }
 
-.footer__decor {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: min(100%, 1196px);
-	height: 517px;
+.footer__image {
 	margin-inline: auto;
-	background-image: url('./../images/fire-decor.svg');
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-
-.footer__title {
-	translate: 0 25px;
-	font-size: 89px;
-	line-height: 1.3;
-	text-align: center;
+	padding-inline: 13px;
 }
 
 .footer__logos {
@@ -658,14 +652,8 @@ body.is-lock {
 		row-gap: 66px;
 	}
 
-	.footer__decor {
-		width: min(100%, 807px);
-		height: 385px;
-	}
-
-	.footer__title {
-		translate: 20px 0;
-		font-size: 60px;
+	.footer__image {
+		max-width: min(890px, 100%);
 	}
 
 	.footer__logos {
@@ -812,15 +800,6 @@ body.is-lock {
 		padding-block: 23px 27px;
 		row-gap: 36px;
 	}
-
-	.footer__decor {
-		width: min(100%, 490px);
-		height: 234px;
-	}
-
-	.footer__title {
-		font-size: 34px;
-	}
 }
 
 @media (max-width: 568px) {
@@ -868,17 +847,6 @@ body.is-lock {
 	.tickets__description {
 		max-width: 296px;
 		font-size: 12px;
-	}
-
-	.footer__decor {
-		width: min(100%, 332px);
-		min-height: 144px;
-		height: auto;
-	}
-
-	.footer__title {
-		font-size: 24px;
-		translate: -5px 10px;
 	}
 
 	.footer__logos {
