@@ -343,6 +343,7 @@ body.is-lock {
 	row-gap: 35px;
 	width: min(100%, 513px);
 	margin-block: 49px;
+	color: var(--color-beige);
 }
 
 .about-us__description strong {
