@@ -46,6 +46,7 @@
 	--color-tomato-light: #cb5a48;
 	--color-fire: #c4201c;
 	--color-beige: #e7d8bb;
+	--color-beige-alt: #ecddc0;
 	--color-overlay: #000000e0;
 
 	--font-family-cowboy: 'COWBOY', sans-serif;
@@ -168,6 +169,7 @@ body.is-lock {
 	font-size: 32px;
 	line-height: 1;
 	text-decoration: none;
+	color: var(--color-beige-alt);
 	transition: color var(--transition-duration);
 }
 
@@ -343,7 +345,7 @@ body.is-lock {
 	row-gap: 35px;
 	width: min(100%, 513px);
 	margin-block: 49px;
-	color: var(--color-beige);
+	color: var(--color-beige-alt);
 }
 
 .about-us__description strong {
