@@ -554,7 +554,7 @@ body.is-lock {
 
 	.hero__info {
 		row-gap: 27px;
-		max-width: min(100%, 416px);
+		width: min(100%, 420px);
 	}
 
 	.hero__title-line-big {
