@@ -36,7 +36,7 @@
 
 :root {
 	--color-black: #000000;
-	--color-white: #fff4ee;
+	--color-white: #ffffff;
 	--color-white-08: rgba(255, 255, 255, 0.8);
 	--color-dark: #232222;
 	--color-yellow: #f58908;
@@ -275,7 +275,7 @@ body.is-lock {
 	display: flex;
 	flex-direction: column;
 	row-gap: 38px;
-	max-width: 496px;
+	width: min(100%, 496px);
 	margin-inline: auto;
 }
 
@@ -431,6 +431,7 @@ body.is-lock {
 	font-family: var(--font-family-el-camino-soft-edges-caps);
 	font-size: 36px;
 	line-height: 1;
+	color: #fff4ee;
 }
 
 .card-ticket__type {
@@ -438,6 +439,7 @@ body.is-lock {
 	font-size: 24px;
 	font-weight: 400;
 	line-height: 1;
+	color: #fff4ee;
 }
 
 .card-ticket__description {
@@ -758,11 +760,11 @@ body.is-lock {
 	}
 
 	.hero__title-line-medium {
-		font-size: 25.5px;
+		font-size: 25px;
 	}
 
 	.hero__subtitle {
-		font-size: 17px;
+		font-size: 13px;
 	}
 
 	.hero__subtitle-line-big {
