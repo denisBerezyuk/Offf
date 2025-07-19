@@ -2,6 +2,7 @@ class Header {
 	selectors = {
 		root: '[data-js-header]',
 		menu: '[data-js-header-menu]',
+		link: '[data-js-header-menu-link]',
 		burgerButton: '[data-js-header-burger-button]',
 	};
 
@@ -21,14 +22,27 @@ class Header {
 		this.bindEvents();
 	}
 
-	onBurgerButtonClick = event => {
+	toggleVisibleMenu = () => {
 		this.burgerButton.classList.toggle(this.stateClasses.isActive);
 		this.menuElement.classList.toggle(this.stateClasses.isVisible);
 		document.body.classList.toggle(this.stateClasses.isLock);
 	};
 
+	onBurgerButtonClick = event => {
+		this.toggleVisibleMenu();
+	};
+
+	onMenuClick = event => {
+		const linkElement = event.target.closest(this.selectors.link);
+
+		if (linkElement && linkElement.href.includes('/#')) {
+			this.toggleVisibleMenu();
+		}
+	};
+
 	bindEvents() {
 		this.burgerButton.addEventListener('click', this.onBurgerButtonClick);
+		this.menuElement.addEventListener('click', this.onMenuClick);
 	}
 }
 
